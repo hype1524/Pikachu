@@ -1,10 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
-const int GAME_COLUMN = 18;
-const int GAME_ROW = 11;
-
 bool check_x(int arr[][GAME_COLUMN], int xa, int ya, int xb, int yb)
 {
     bool check = false;
@@ -266,4 +259,3 @@ bool find_way(int arr[][GAME_COLUMN], int xa, int ya, int xb, int yb)
 
     return success;
 }
-
