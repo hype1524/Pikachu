@@ -1,23 +1,265 @@
-bool find_way(int** arr, int x1, int y1, int x2, int y2)
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int GAME_COLUMN = 18;
+const int GAME_ROW = 11;
+
+bool check_x(int arr[][GAME_COLUMN], int xa, int ya, int xb, int yb)
 {
-    bool success = false;
+    bool check = false;
 
-    if(x1 == x2 && y1 != y2)
+    int minxa = xa;
+    int maxxa = xa;
+    int minxb = xb;
+    int maxxb = xb;
+
+    for(int i = xa - 1; i >= 0; i--)
     {
-        success = check_x(arr, x1, y1, y2);
+        if(arr[i][ya] != 0)
+        {
+            minxa = i + 1;
+            break;
+        }
+
+        if(i == 0)
+        {
+            minxa = i;
+        }
     }
 
-    else if(x1 != x2 && y1 == y2)
+    for(int i = xa + 1; i < GAME_ROW; i++)
     {
-        success = check_y(arr, y1, x1, x2);
+        if(arr[i][ya] != 0)
+        {
+            maxxa = i - 1;
+            break;
+        }
+
+        if(i == GAME_ROW - 1)
+        {
+            maxxa = i;
+        }
     }
 
-    else if(x1 != x2 && y1 != y2)
+    for(int i = xb - 1; i >= 0; i--)
     {
-        success = check_x_and_y(arr, x1, x2, y1, y2);
+        if(arr[i][yb] != 0)
+        {
+            minxb = i + 1;
+            break;
+        }
+
+        if(i == 0)
+        {
+            minxb = i;
+        }
     }
 
-    else
+    for(int i = xb + 1; i < GAME_ROW; i++)
+    {
+        if(arr[i][yb] != 0)
+        {
+            maxxb = i - 1;
+            break;
+        }
+
+        if(i == GAME_ROW - 1)
+        {
+            maxxb = i;
+        }
+    }
+
+    int minx = max(minxa, minxb);
+    int maxx = min(maxxa, maxxb);
+
+    if(minx <= maxx)
+    {
+        if(ya < yb)
+        {
+            for(int i = minx; i <= maxx; i++)
+            {
+                bool check1 = true;
+
+                for(int j = ya + 1; j <= yb - 1; j++)
+                {
+                    if(arr[i][j] != 0)
+                    {
+                        check1 = false;
+                        break;
+                    }
+                }
+
+                if(check1)
+                {
+                    check = true;
+                    break;
+                }
+            }
+        }
+
+        else if(ya > yb)
+        {
+            for(int i = minx; i <= maxx; i++)
+            {
+                bool check1 = true;
+
+                for(int j = yb + 1; j <= ya - 1; j++)
+                {
+                    if(arr[i][j] != 0)
+                    {
+                        check1 = false;
+                        break;
+                    }
+                }
+
+                if(check1)
+                {
+                    check = true;
+                    break;
+                }
+            }
+        }
+
+        else
+        {
+            check = true;
+        }
+    }
+
+    return check;
+}
+
+bool check_y(int arr[][GAME_COLUMN], int xa, int ya, int xb, int yb)
+{
+    bool check = false;
+
+    int minya = ya;
+    int maxya = ya;
+    int minyb = yb;
+    int maxyb = yb;
+
+    for(int i = ya - 1; i >= 0; i--)
+    {
+        if(arr[xa][i] != 0)
+        {
+            minya = i + 1;
+            break;
+        }
+
+        if(i == 0)
+        {
+            minya = i;
+        }
+    }
+
+    for(int i = ya + 1; i < GAME_COLUMN; i++)
+    {
+        if(arr[xa][i] != 0)
+        {
+            maxya = i - 1;
+            break;
+        }
+
+        if(i == GAME_COLUMN - 1)
+        {
+            maxya = i;
+        }
+    }
+
+    for(int i = yb - 1; i >= 0; i--)
+    {
+        if(arr[xb][i] != 0)
+        {
+            minyb = i + 1;
+            break;
+        }
+
+        if(i == 0)
+        {
+            minyb = i;
+        }
+    }
+
+    for(int i = yb + 1; i < GAME_COLUMN; i++)
+    {
+        if(arr[xb][i] != 0)
+        {
+            maxyb = i - 1;
+            break;
+        }
+
+        if(i == GAME_COLUMN - 1)
+        {
+            maxyb = i;
+        }
+    }
+
+    int miny = max(minya, minyb);
+    int maxy = min(maxya, maxyb);
+
+    if(miny <= maxy)
+    {
+        if(xa < xb)
+        {
+            for(int i = miny; i <= maxy; i++)
+            {
+                bool check1 = true;
+
+                for(int j = xa + 1; j <= xb - 1; j++)
+                {
+                    if(arr[j][i] != 0)
+                    {
+                        check1 = false;
+                        break;
+                    }
+                }
+
+                if(check1)
+                {
+                    check = true;
+                    break;
+                }
+            }
+        }
+
+        else if(xa > xb)
+        {
+            for(int i = miny; i <= maxy; i++)
+            {
+                bool check1 = true;
+
+                for(int j = xb + 1; j <= xa - 1; j++)
+                {
+                    if(arr[j][i] != 0)
+                    {
+                        check1 = false;
+                        break;
+                    }
+                }
+
+                if(check1)
+                {
+                    check = true;
+                    break;
+                }
+            }
+        }
+
+        else
+        {
+            check = true;
+        }
+    }
+
+    return check;
+}
+
+bool find_way(int arr[][GAME_COLUMN], int xa, int ya, int xb, int yb)
+{
+    bool success = true;
+
+    if(!check_x(arr, xa, ya, xb, yb) && !check_y(arr, xa, ya, xb, yb))
     {
         success = false;
     }
@@ -25,413 +267,32 @@ bool find_way(int** arr, int x1, int y1, int x2, int y2)
     return success;
 }
 
-bool check_x(int arr**, int x, int y1, int y2)
+int main()
 {
-    bool check = false;
+    int a[GAME_ROW][GAME_COLUMN];
 
-    if(y1 == y2 - 1)
+    for(int i = 0 ; i < GAME_COLUMN; i++)
     {
-        check = true;
+        a[0][i] = 0;
+        a[10][i] = 0;
     }
 
-    else if(y1 = y2 + 1)
+    for(int i = 0; i < GAME_ROW; i++)
     {
-        check = true;
+        a[i][0] = 0;
+        a[17][0] = 0;
     }
 
-    else if(y1 < y2 - 1)
+    for(int i = 1; i <= 9; i++)
     {
-        bool check1 = false;
-
-        for(int i = y1 + 1; i < y2; i++)
+        for(int j = 1; j <= 16; j++)
         {
-            if(arr[x][i] != 0)
-            {
-                break;
-            }
-
-            else
-            {
-                if(i == y2 - 1)
-                {
-                    check1 = true;
-                }
-            }
+            cin >> a[i][j];
         }
-
-        if(!check1)
-        {
-            for(int i = x - 1; i >= 0; i--)
-            {
-                if(arr[i][y1] != 0 || arr[i][y2] != 0)
-                {
-                    break;
-                }
-
-                else
-                {
-                    for(int j = y1 + 1; j < y2; j++)
-                    {
-                        if(arr[i][j] != 0)
-                        {
-                            break;
-                        }
-
-                        else
-                        {
-                            if(j == y2 - 1)
-                            {
-                                check1 = true;
-                            }
-                        }
-                    }
-
-                    if(check1)
-                    {
-                        break;
-                    }
-                }
-            }
-
-            if(!check1)
-            {
-                for(int i = x + 1; i < GAME_ROW; i++)
-                {
-                    if(arr[i][y1] != 0 || arr[i][y2] != 0)
-                    {
-                        break;
-                    }
-
-                    else
-                    {
-                        for(int j = y1 + 1; j < y2; j++)
-                        {
-                            if(arr[i][j] != 0)
-                            {
-                                break;
-                            }
-
-                            else
-                            {
-                                if(j == y1 - 1)
-                                {
-                                    check1 = true;
-                                }
-                            }
-                        }
-
-                        if(check1)
-                        {
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        check = check1;
     }
 
-    else if(y1 > y2 + 1)
-    {
-        bool check1 = false;
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
 
-        for(int i = y2 + 1; i < y1; i++)
-        {
-            if(arr[x][i] != 0)
-            {
-                break;
-            }
-
-            else
-            {
-                if(i == y1 - 1)
-                {
-                    check1 = true;
-                }
-            }
-        }
-
-        if(!check1)
-        {
-            for(int i = x - 1; i >= 0; i--)
-            {
-                if(arr[i][y2] != 0 || arr[i][y1] != 0)
-                {
-                    break;
-                }
-
-                else
-                {
-                    for(int j = y2 + 1; j < y1; j++)
-                    {
-                        if(arr[i][j] != 0)
-                        {
-                            break;
-                        }
-
-                        else
-                        {
-                            if(j == y1 - 1)
-                            {
-                                check1 = true;
-                            }
-                        }
-                    }
-
-                    if(check1)
-                    {
-                        break;
-                    }
-                }
-            }
-
-            if(!check1)
-            {
-                for(int i = x + 1; i < GAME_ROW; i++)
-                {
-                    if(arr[i][y2] != 0 || arr[i][y1] != 0)
-                    {
-                        break;
-                    }
-
-                    else
-                    {
-                        for(int j = y2 + 1; j < y1; j++)
-                        {
-                            if(arr[i][j] != 0)
-                            {
-                                break;
-                            }
-
-                            else
-                            {
-                                if(j == y1 - 1)
-                                {
-                                    check1 = true;
-                                }
-                            }
-                        }
-
-                        if(check1)
-                        {
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        check = check1;
-    }
-
-    return check;
-}
-
-bool check_y(int arr**, int y, int x1, int x2)
-{
-    bool check = false;
-
-    if(x1 == x2 - 1)
-    {
-        check = true;
-    }
-
-    else if(x1 = x2 + 1)
-    {
-        check = true;
-    }
-
-    else if(x1 < x2 - 1)
-    {
-        bool check1 = false;
-
-        for(int i = x1 + 1; i < x2; i++)
-        {
-            if(arr[i][y] != 0)
-            {
-                break;
-            }
-
-            else
-            {
-                if(i == x2 - 1)
-                {
-                    check1 = true;
-                }
-            }
-        }
-
-        if(!check1)
-        {
-            for(int i = y - 1; i >= 0; i--)
-            {
-                if(arr[x1][i] != 0 || arr[x2][i] != 0)
-                {
-                    break;
-                }
-
-                else
-                {
-                    for(int j = x1 + 1; j < x2; j++)
-                    {
-                        if(arr[j][i] != 0)
-                        {
-                            break;
-                        }
-
-                        else
-                        {
-                            if(j == x2 - 1)
-                            {
-                                check1 = true;
-                            }
-                        }
-                    }
-
-                    if(check1)
-                    {
-                        break;
-                    }
-                }
-            }
-
-            if(!check1)
-            {
-                for(int i = y + 1; i < GAME_COLUMN; i++)
-                {
-                    if(arr[x1][i] != 0 || arr[x2][i] != 0)
-                    {
-                        break;
-                    }
-
-                    else
-                    {
-                        for(int j = x1 + 1; j < x2; j++)
-                        {
-                            if(arr[j][i] != 0)
-                            {
-                                break;
-                            }
-
-                            else
-                            {
-                                if(j == x1 - 1)
-                                {
-                                    check1 = true;
-                                }
-                            }
-                        }
-
-                        if(check1)
-                        {
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        check = check1;
-    }
-
-    else if(x1 > x2 + 1)
-    {
-        bool check1 = false;
-
-        for(int i = x2 + 1; i < x1; i++)
-        {
-            if(arr[i][y] != 0)
-            {
-                break;
-            }
-
-            else
-            {
-                if(i == x1 - 1)
-                {
-                    check1 = true;
-                }
-            }
-        }
-
-        if(!check1)
-        {
-            for(int i = y - 1; i >= 0; i--)
-            {
-                if(arr[x2][i] != 0 || arr[x1][i] != 0)
-                {
-                    break;
-                }
-
-                else
-                {
-                    for(int j = x2 + 1; j < x1; j++)
-                    {
-                        if(arr[j][i] != 0)
-                        {
-                            break;
-                        }
-
-                        else
-                        {
-                            if(j == x1 - 1)
-                            {
-                                check1 = true;
-                            }
-                        }
-                    }
-
-                    if(check1)
-                    {
-                        break;
-                    }
-                }
-            }
-
-            if(!check1)
-            {
-                for(int i = y + 1; i < GAME_COLUMN; i++)
-                {
-                    if(arr[x2][i] != 0 || arr[x1][i] != 0)
-                    {
-                        break;
-                    }
-
-                    else
-                    {
-                        for(int j = x2 + 1; j < x1; j++)
-                        {
-                            if(arr[j][i] != 0)
-                            {
-                                break;
-                            }
-
-                            else
-                            {
-                                if(j == x1 - 1)
-                                {
-                                    check1 = true;
-                                }
-                            }
-                        }
-
-                        if(check1)
-                        {
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        check = check1;
-    }
-
-    return check;
-}
-
-bool check_x_and_y(int** arr, int x1, int y1, int x2, int y2)
-{
-
+    cout << find_way(a, x1, y1, x2, y2);
 }
