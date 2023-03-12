@@ -267,32 +267,3 @@ bool find_way(int arr[][GAME_COLUMN], int xa, int ya, int xb, int yb)
     return success;
 }
 
-int main()
-{
-    int a[GAME_ROW][GAME_COLUMN];
-
-    for(int i = 0 ; i < GAME_COLUMN; i++)
-    {
-        a[0][i] = 0;
-        a[10][i] = 0;
-    }
-
-    for(int i = 0; i < GAME_ROW; i++)
-    {
-        a[i][0] = 0;
-        a[17][0] = 0;
-    }
-
-    for(int i = 1; i <= 9; i++)
-    {
-        for(int j = 1; j <= 16; j++)
-        {
-            cin >> a[i][j];
-        }
-    }
-
-    int x1, y1, x2, y2;
-    cin >> x1 >> y1 >> x2 >> y2;
-
-    cout << find_way(a, x1, y1, x2, y2);
-}
