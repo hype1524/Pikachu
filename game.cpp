@@ -100,9 +100,9 @@ void Game::init(int lv, SDL_Renderer* &render, int cnt)
     v << "data/chance/" << count_change << "-chance.png";
     chance_button = new Button(CHANCE_RECT, v.str().c_str(), v.str().c_str(), render);
 
-    for(int i = 0; i < 160; i++)
+    for(int i = 0; i < 420; i++)
     {
-        SDL_Rect rect = {200 + 5 * i, 50, 5, 30};
+        SDL_Rect rect = {180 + 2 * i, 50, 2, 30};
         time_button[i] = new Button(rect, "data/time/run_time.png", "data/time/run_time.png", render);
     }
 
@@ -283,7 +283,7 @@ void Game::render(SDL_Renderer* &render)
 
     in_game_time = (game_time->getTicks() / 1000.f);
 
-    for(int i = 0; i < 160 - in_game_time; i++)
+    for(int i = 0; i < 420 - in_game_time; i++)
     {
         time_button[i]->render_up(render);
     }
@@ -740,7 +740,7 @@ bool Game::check_lose_main_menu(SDL_Event* e)
 
 int Game::get_time()
 {
-    return 160 - in_game_time;
+    return 420 - in_game_time;
 }
 
 void Game::game_time_pause()

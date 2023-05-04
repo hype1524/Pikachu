@@ -57,7 +57,7 @@ class Game
         Button* pause_button;
         Button* menu_button;
         Button* chance_button;
-        Button* time_button[160];
+        Button* time_button[420];
         SDL_Texture* level_texture;
         Sub_Menu* sub_win_menu;
         Sub_Menu* sub_lose_menu;
