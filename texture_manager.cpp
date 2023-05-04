@@ -14,3 +14,4 @@ SDL_Texture* texture_manager::load_texture(const char* file_name, SDL_Renderer* 
 
     return ntexture;
 }
+
