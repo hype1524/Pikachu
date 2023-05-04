@@ -209,7 +209,6 @@ void Game::update(int xa, int ya, int xb, int yb, SDL_Renderer* &render)
         s << "data/chance/" << count_change << "-chance.png";
         chance_button = new Button(CHANCE_RECT, s.str().c_str(), s.str().c_str(), render);
 
-
         while(!check_possible())
         {
             change();
