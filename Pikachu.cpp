@@ -16,7 +16,6 @@
 #include "everything.h"
 
 using namespace std;
-
 Create* nwindow = nullptr;
 
 void play_game()
