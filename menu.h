@@ -12,17 +12,17 @@ using namespace std;
 
 class Menu
 {
-    public:
-        Menu();
-        Menu(SDL_Renderer* &render);
-        ~Menu();
+public:
+    Menu();
+    Menu(SDL_Renderer* &render);
+    ~Menu();
 
-        bool handle(SDL_Event* e);
-        void render(SDL_Renderer* &render);
+    bool handle(SDL_Event* e);
+    void render(SDL_Renderer* &render);
 
-    private:
-        Button* play_button;
-        SDL_Texture* menu_texture;
+private:
+    Button* play_button;
+    SDL_Texture* menu_texture;
 };
 
 #endif // MENU_H_INCLUDED

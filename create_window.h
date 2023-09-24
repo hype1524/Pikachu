@@ -14,31 +14,31 @@
 
 class Create
 {
-    public:
-        Create();
-        ~Create();
+public:
+    Create();
+    ~Create();
 
-        void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen, SDL_Window* &win, SDL_Renderer* &render);
+    void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen, SDL_Window* &win, SDL_Renderer* &render);
 
-        void handle(SDL_Renderer* &render);
-        void render(SDL_Renderer* &ren);
-        void clean(SDL_Window* &win, SDL_Renderer* &render);
+    void handle(SDL_Renderer* &render);
+    void render(SDL_Renderer* &ren);
+    void clean(SDL_Window* &win, SDL_Renderer* &render);
 
-        int get_game_state()
-        {
-            return state;
-        }
+    int get_game_state()
+    {
+        return state;
+    }
 
-        void play_soundtrack();
+    void play_soundtrack();
 
-    private:
-        int state;
-        int sub_state;
-        Menu* menu;
-        Game* game;
-        Sub_Menu* winning_menu;
-        int counting;
-        Mix_Music* soundtrack;
+private:
+    int state;
+    int sub_state;
+    Menu* menu;
+    Game* game;
+    Sub_Menu* winning_menu;
+    int counting;
+    Mix_Music* soundtrack;
 };
 
 #endif // CREATE_WINDOW_H_INCLUDED

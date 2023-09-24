@@ -9,19 +9,19 @@
 
 class Sub_Menu
 {
-    public:
-        Sub_Menu();
-        Sub_Menu(const char* s, const char* r, SDL_Renderer* &render);
-        ~Sub_Menu();
+public:
+    Sub_Menu();
+    Sub_Menu(const char* s, const char* r, SDL_Renderer* &render);
+    ~Sub_Menu();
 
-        bool play(SDL_Event* e);
-        bool main_menu(SDL_Event* e);
-        void render(SDL_Renderer* &render);
+    bool play(SDL_Event* e);
+    bool main_menu(SDL_Event* e);
+    void render(SDL_Renderer* &render);
 
-    private:
-        Button* play_button;
-        Button* main_menu_button;
-        SDL_Texture* sub_menu_texture;
+private:
+    Button* play_button;
+    Button* main_menu_button;
+    SDL_Texture* sub_menu_texture;
 };
 
 #endif // SUB_MENU_H_INCLUDED

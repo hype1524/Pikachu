@@ -24,7 +24,7 @@ void Timer::start()
     mPaused = false;
 
     mStartTicks = SDL_GetTicks();
-	mPausedTicks = 0;
+    mPausedTicks = 0;
 }
 
 void Timer::stop()
@@ -33,8 +33,8 @@ void Timer::stop()
 
     mPaused = false;
 
-	mStartTicks = 0;
-	mPausedTicks = 0;
+    mStartTicks = 0;
+    mPausedTicks = 0;
 }
 
 void Timer::pause()
@@ -44,7 +44,7 @@ void Timer::pause()
         mPaused = true;
 
         mPausedTicks = SDL_GetTicks() - mStartTicks;
-		mStartTicks = 0;
+        mStartTicks = 0;
     }
 }
 
@@ -62,7 +62,7 @@ void Timer::unpause()
 
 int Timer::getTicks()
 {
-	int time = 0;
+    int time = 0;
 
     if( mStarted )
     {

@@ -215,17 +215,10 @@ void Game::update(int xa, int ya, int xb, int yb, SDL_Renderer* &render)
         }
     }
 
-
     for(int i = 0; i < GAME_ROW ; i++)
     {
         for(int j = 0; j < GAME_COLUMN; j++)
         {
-            if(icon_button[i][j] != NULL)
-            {
-                delete(icon_button[i][j]);
-                icon_button[i][j] = NULL;
-            }
-
             if(board[i][j] == 0)
             {
                 continue;
@@ -243,6 +236,7 @@ void Game::update(int xa, int ya, int xb, int yb, SDL_Renderer* &render)
             }
         }
     }
+    cout << 2;
 }
 
 void Game::render(SDL_Renderer* &render)
@@ -751,4 +745,3 @@ void Game::game_time_unpause()
 {
     game_time->unpause();
 }
-

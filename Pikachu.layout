@@ -2,16 +2,6 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="timer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="308" topLine="13" />
-		</Cursor>
-	</File>
-	<File name="create_window.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="507" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="texture_manager.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="114" topLine="0" />
@@ -19,7 +9,35 @@
 	</File>
 	<File name="menu.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="475" topLine="9" />
+			<Cursor1 position="474" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Pikachu.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="655" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="create_window.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5757" topLine="205" />
+		</Cursor>
+	</File>
+	<File name="game.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5785" topLine="114" />
+		</Cursor>
+		<Folding>
+			<Collapse line="20" />
+		</Folding>
+	</File>
+	<File name="timer.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1247" topLine="71" />
+		</Cursor>
+	</File>
+	<File name="delete.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="688" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="sub_menu.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -34,9 +52,63 @@
 			<Collapse line="53" />
 		</Folding>
 	</File>
-	<File name="everything.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="button.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="408" topLine="7" />
+			<Cursor1 position="587" topLine="51" />
+		</Cursor>
+		<Folding>
+			<Collapse line="13" />
+			<Collapse line="68" />
+			<Collapse line="73" />
+			<Collapse line="78" />
+		</Folding>
+	</File>
+	<File name="delete.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="224" topLine="3" />
+		</Cursor>
+		<Folding>
+			<Collapse line="13" />
+			<Collapse line="58" />
+			<Collapse line="103" />
+			<Collapse line="148" />
+			<Collapse line="193" />
+			<Collapse line="344" />
+		</Folding>
+	</File>
+	<File name="menu.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="687" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="13" />
+			<Collapse line="23" />
+			<Collapse line="28" />
+		</Folding>
+	</File>
+	<File name="timer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="308" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="game.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2065" topLine="46" />
+		</Cursor>
+	</File>
+	<File name="everything.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="328" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="button.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="371" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="sub_menu.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="240" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="texture_manager.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -47,115 +119,9 @@
 			<Collapse line="9" />
 		</Folding>
 	</File>
-	<File name="Pikachu.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+	<File name="create_window.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="358" topLine="35" />
-		</Cursor>
-	</File>
-	<File name="delete.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="688" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="button.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="371" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="button.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="181" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="13" />
-			<Collapse line="20" />
-			<Collapse line="68" />
-			<Collapse line="73" />
-			<Collapse line="78" />
-		</Folding>
-	</File>
-	<File name="menu.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="687" topLine="3" />
-		</Cursor>
-		<Folding>
-			<Collapse line="13" />
-			<Collapse line="23" />
-			<Collapse line="28" />
-		</Folding>
-	</File>
-	<File name="create_window.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5465" topLine="248" />
-		</Cursor>
-	</File>
-	<File name="game.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3636" topLine="105" />
-		</Cursor>
-		<Folding>
-			<Collapse line="167" />
-			<Collapse line="248" />
-			<Collapse line="310" />
-			<Collapse line="320" />
-			<Collapse line="325" />
-			<Collapse line="450" />
-			<Collapse line="575" />
-			<Collapse line="594" />
-			<Collapse line="640" />
-			<Collapse line="666" />
-			<Collapse line="690" />
-			<Collapse line="695" />
-			<Collapse line="700" />
-			<Collapse line="705" />
-			<Collapse line="710" />
-			<Collapse line="715" />
-			<Collapse line="720" />
-			<Collapse line="725" />
-			<Collapse line="730" />
-			<Collapse line="735" />
-			<Collapse line="740" />
-			<Collapse line="745" />
-			<Collapse line="750" />
-		</Folding>
-	</File>
-	<File name="delete.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="67" topLine="6" />
-		</Cursor>
-		<Folding>
-			<Collapse line="7" />
-			<Collapse line="13" />
-			<Collapse line="58" />
-			<Collapse line="103" />
-			<Collapse line="148" />
-			<Collapse line="193" />
-			<Collapse line="344" />
-		</Folding>
-	</File>
-	<File name="timer.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1247" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="8" />
-			<Collapse line="20" />
-			<Collapse line="30" />
-			<Collapse line="40" />
-			<Collapse line="51" />
-			<Collapse line="63" />
-			<Collapse line="82" />
-			<Collapse line="87" />
-		</Folding>
-	</File>
-	<File name="game.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2211" topLine="55" />
-		</Cursor>
-	</File>
-	<File name="sub_menu.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="240" topLine="0" />
+			<Cursor1 position="507" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

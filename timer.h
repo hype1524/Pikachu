@@ -7,26 +7,26 @@
 
 class Timer
 {
-    public:
-        Timer();
-        ~Timer();
+public:
+    Timer();
+    ~Timer();
 
-        void start();
-        void stop();
-        void pause();
-        void unpause();
+    void start();
+    void stop();
+    void pause();
+    void unpause();
 
-        int getTicks();
+    int getTicks();
 
-        bool isStarted();
-		bool isPaused();
+    bool isStarted();
+    bool isPaused();
 
-    private:
-        int mStartTicks;
+private:
+    int mStartTicks;
 
-		int mPausedTicks;
+    int mPausedTicks;
 
-		bool mPaused;
-		bool mStarted;
+    bool mPaused;
+    bool mStarted;
 };
 #endif // TIMER_H_INCLUDED
