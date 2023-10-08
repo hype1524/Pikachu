@@ -236,7 +236,6 @@ void Game::update(int xa, int ya, int xb, int yb, SDL_Renderer* &render)
             }
         }
     }
-    cout << 2;
 }
 
 void Game::render(SDL_Renderer* &render)
